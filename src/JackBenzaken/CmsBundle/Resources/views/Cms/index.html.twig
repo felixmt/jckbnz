@@ -1,0 +1,36 @@
+{# src/Perso/BlogBundle/Resources/views/Blog/index.html.twig #}
+
+{% extends "JackBenzakenCmsBundle::base_frontend.html.twig" %}
+
+{% block body  %}
+    <div class="bloc-container bloc-home">
+		<a href="{{ path('questions') }}">
+			<div class="btn-redQuestion">
+				<span style="font-size:14px;font-family:'Museo Sans 100'">L'Actualité</span><br><br>Esthétique
+				<div style="padding-top:10px"><img src="{{ asset ('img/arrow-home-main.png') }}"></div>
+			</div>
+		</a>
+        <img style="display:block; margin: 0 auto;" src="{{ asset('img/home-top.jpg') }}">
+        
+        <div class="bloc-bottom">
+            <div id="home-bottomLeft">
+                <div id="home-bottomLeftContent">
+                    <div id="redbox"></div>
+                    <div class="bloc-title">
+                       <span style="font-family:'Museo Sans 100'">Dr Jack</span> Benzaken
+                    </div>
+                    <span style="font-family:'Museo Sans 100'">Ancien interne des hopitaux de la région de Paris, Jack Benzaken est spécialiste en  chirurgie plastique reconstructrice et esthétique et pratique cette spécialité depuis plus de 20 ans.</span><br>
+                </div>
+                <div class="btn-black"><a href="{{ path('benzaken') }}"> <span style="margin-right:7px;margin-bottom:5px;">En savoir <span style="font-family:'Museo Sans 500'">plus</span></span><span style="margin-top:10px"><img src="{{ asset('img/arrow-home-more.png') }}"></span></a></div>
+            </div>
+            <div id="home-bottomRight">
+                <a href="{{ path('visage') }}">
+					<div class="btn-redLarge">
+						<span style="font-size:14px;font-family: 'Museo Sans 500';">Les Interventions</span><br><br><span style="font-size:12px;">Chirurgie du visage et de la silhouette<br>Médecine esthétique</span><div style="padding-top:10px"><img src="{{ asset ('img/arrow-home-interventions.png') }}"></div>
+					</div>
+				</a>
+                <div><img src="{{ asset('img/home-bottom.jpg') }}"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

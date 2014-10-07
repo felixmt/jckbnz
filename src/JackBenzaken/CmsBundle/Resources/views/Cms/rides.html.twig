@@ -1,0 +1,251 @@
+{# src/Perso/BlogBundle/Resources/views/Blog/rides.html.twig #}
+
+{% extends "JackBenzakenCmsBundle::base_frontend.html.twig" %}
+
+{% block body  %}
+    <div class="bloc-container">
+        <div id="visage-top-content">
+			<div class="interventions-title">LE TRAITEMENT DES RIDES</div>
+			<div class="interventions-menu">
+				<ul style="list-style-type:none;">
+					<li class="slide-section-link">
+						<a class="slide-link"><!--<img class="slide-pictos" src="{{ asset('img/picto-visage-eye.png') }}">-->1</a>
+						<ul class="slide-subsection">
+							<li class="slide-subsection-li"><a class="slide-subsection-link title" id="blepharoplastie">La blépharoplastie</a></li>
+						</ul>
+					</li>
+
+					<li class="slide-section-link" style="margin-top:8px;">
+						<a class="slide-link">2<!--<img class="slide-pictos" src="{{ asset('img/picto-visage-nez.png') }}">--></a>
+						<ul class="slide-subsection" style="margin-top:68px;">
+							<li class="slide-subsection-li"><a class="slide-subsection-link title" id="rhinoplastie">La rhinoplastie</a></li>
+						</ul>
+					</li>
+
+					<li class="slide-section-link" style="margin-top:8px;">
+						<a class="slide-link"><!--<img class="slide-pictos" src="{{ asset('img/picto-visage-ears.png') }}">-->3</a>
+						<ul class="slide-subsection" style="margin-top:136px;">
+							<li class="slide-subsection-li"><a class="slide-subsection-link title" id="lifting">Le lifting cervico-facial</a></li>
+						</ul>
+					</li>
+
+					<li class="slide-section-link" style="margin-top:8px;">
+						<a class="slide-link"><!--<img class="slide-pictos" src="{{ asset('img/picto-visage-face.png') }}">-->4</a>
+						<ul class="slide-subsection" style="margin-top:204px;">
+							<li class="slide-subsection-li"><a class="slide-subsection-link title" id="oreilles">Les oreilles décollées</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+        </div>
+        <div class="interventions-img"><img style="display:block; margin: 0 auto;" src="{{ asset('img/rides-femme.jpg') }}"></div>
+        <div class="visage-bottom-content" id="blepharoplastie-content">
+            <div class="interventions-bottomRight">
+                <table><tr class="interventions-tr-first"><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-stetho.png') }}"></td><td>Ambulatoire</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-chrono.png') }}"></td><td>1-2h d'opération</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-moon.png') }}"></td><td>Anesthésie locale</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-arrow.png') }}"></td><td>Résultats sous 15 jours</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-price.png') }}"></td><td>Entre 1 500 € et 3 000 €</td></tr></table>
+            </div>
+            <div class="interventions-bottomLeft">
+                <h2 class='visage-title'>La chirurgie des paupières</h2> a pour but:<br>
+				- Au niveau de la paupière supérieure: de supprimer l’excès cutané et de corriger l’aspect de paupière tombante en redonnant ainsi au regard un nouvel éclat<br>
+				-  Au niveau de la paupière inferieure: de corriger les poches graisseuses et à un moindre degré de réduire l’excès cutané<br>
+				Suivant la demande et de la nature des anomalies constatées, le patient aura le choix de corriger soit seulement les paupières supérieures, soit les paupières supérieures et inférieures.<br>
+				<br>
+				<h2 class='visage-title'>La préparation à l'intervention</h2><br>
+				<a class="content-link" id="visage-blepharoplastie-premConsult">La première consultation</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-premConsult-content">
+					Pendant cette première consultation aura lieu :<br>
+					<br>
+					1/ La prise de contact<br>
+					Cette première prise de contact permet de préciser la demande du patient et de connaître ses antécédents médicaux et chirurgicaux.<br>
+					Elle a pour but d’informer des modalités de l’intervention en précisant ses risques et complications éventuelles.<br>
+					<br>
+					2/ L’examen clinique<br>
+					L’examen clinique des paupières avant opération est capital car l’intervention dépend de facteurs propres à chaque patient. Il permet d’évaluer:<br>
+					- La qualité, l’élasticité et l’épaisseur de la peau<br>
+					- La présence de poches graisseuses<br>
+					- Les contre indications ophtalmologiques à cette intervention (hypertension oculaire, œil sec)<br>
+					<br>
+					3/ La remise des documents<br>
+					Pendant cette première consultation, des photos pré-opératoires sont prises.<br>
+					Les modalités opératoires sont expliquées, de même que les risques potentiels.<br>
+					Un consentement opératoire ainsi qu’un devis détaillé et une fiche d’information sont remis au patient.<br>
+					En cas de chute importante de la paupière supérieure responsable d’une gène visuelle ,une prise en charge par la sécurité est possible.
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-secConsult">La seconde consultation : le bilan pré-opératoire</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-secConsult-content">
+				La seconde consultation a  lieu après une première phase de réflexion indispensable au patient et permet d’élaborer plus spécifiquement le projet chirurgical.<br>
+				Un nouvel entretien a systématiquement lieu entre le patient et le chirurgien, afin de rappeler les modalités de l’opération et de s’assurer de la bonne compréhension de l’intervention.<br>
+				Un examen ophtalmologique est parfois demandé.
+				</div>
+				<br>
+				<h2 class='visage-title'>L'intervention</h2><br>
+				<a class="content-link" id="visage-blepharoplastie-anesth">L'anesthésie</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-anesth-content">
+					L’intervention se déroule sous anesthésie locale pour la paupière supérieure. Une consultation avec l’anesthésiste est nécessaire quelques jours avant l’intervention.<br>
+					Pour les quatre paupières on pourra avoir recours à une neurolept-analgésie (anesthésie locale renforcée),voire à une anesthésie générale
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-action">L'action chirurgicale</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-action-content">
+					La durée de l’intervention est de 1h pour les paupières supérieures et de 2h pour les quatre paupières.<br>
+					Pour la paupière supérieure la cicatrice est dissimulé dans le pli palpébral.<br>
+					Pour la paupière inferieure elle peut se faire soit sous les cils soit par voie endo-conjonctivale.<br>
+					La quantité de peau à retirer à la paupière inferieure est très limitée afin d’éviter des complications (œil rond).
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-duree">La durée d'hospitalisation</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-duree-content">
+					Les paupières supérieures peuvent se faire en ambulatoire (sortie le jour même).<br>
+					Pour les quatre paupières une nuit post-opératoire est souvent proposée.
+				</div>
+				<br>
+				<h2 class='visage-title'>Les suites post-opératoires</h2><br>
+				<a class="content-link" id="visage-blepharoplastie-suivi">Le suivi</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-suivi-content">
+					Plusieurs consultations de suivi sont assurées:<br>
+					Les fils sont retirés entre le sixième et le huitième jour, une consultation de contrôle à lieu au bout d’1 mois puis au bout d’ 1 an<br>
+					Des compresses glacées sont également à appliquer sur les yeux les deux premiers jours.
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-delais">Les délais</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-delais-content">
+					Le résultat est appréciable sous 15 jours.<br>
+					Les cicatrices peuvent être maquillées au huitième jour.
+				</div>
+            </div>
+        </div>
+        <div class="visage-bottom-content" id="rhinoplastie-content">
+            <div class="interventions-bottomRight">
+                <table><tr class="interventions-tr-first"><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-stetho.png') }}"></td><td>Une nuit d'hospitalisation</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-chrono.png') }}"></td><td>2h d'opération</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-moon.png') }}"></td><td>Anesthésie générale</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-arrow.png') }}"></td><td>Résultats sous 1 à 2 mois</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-price.png') }}"></td><td>Entre 3 000 € et 5 000 €</td></tr></table>
+            </div>
+            <div class="interventions-bottomLeft">
+                <h2 class='visage-title'>La rhinoplastie</h2> vise à modifier l’aspect esthétique d’un nez. Elle peut être motivée par des problèmes fonctionnels ou par un souci esthétique.<br>
+				<br>
+				<h2 class='visage-title'>La préparation à l'intervention</h2><br>
+				<a class="content-link" id="visage-rhinoplastie-premConsult">La première consultation</a><br>
+				<div class="interventions-slide-content" id="visage-rhinoplastie-premConsult-content">
+					Pendant cette première consultation aura lieu :<br>
+					<br>
+					1/ La prise de contact<br>
+					Cette première prise de contact a lieu au cabinet Thiers. 
+					Elle permet de connaître les véritables motivations du patient et de préciser avec lui les anomalies qu’il souhaite corriger.<br>
+					Cette première consultation est également le moyen de s’assurer de l’absence de troubles psychologiques (dysmorphophobie) qui pourraient constituer une contre-indication à l’intervention.<br>
+					<br>
+					2/ L’examen clinique<br>
+					L’examen clinique du nez avant opération est capital car l’intervention dépend de facteurs propres à chaque patient. Il permet d’évaluer:<br>
+					- La qualité et l’épaisseur de la peau<br>
+					- La qualité du cartilage, du soutien osseux, et la présence d’une bosse<br>
+					- La perméabilité nasale, l’existence d’une déviation de cloison ou du phénomène de valve nasale.<br>
+					Cet examen « endo-nasal » est indispensable car la restauration d’un nez fonctionnel après l’opération est aussi importante que son aspect esthétique.<br>
+					<br>
+					3/ La remise des documents<br>
+					Pendant cette première consultation, des photos pré-opératoires sont prises.<br>
+					Les modalités opératoires sont expliquées, de même que les risques potentiels.<br>
+					Un consentement opératoire ainsi qu’un devis détaillé et une fiche d’information sont remis au patient.<br>
+					Dans certains cas post-traumatiques, une prise en charge peut-être accordée par l’Assurance Maladie après visite et accord du médecin conseil.
+				</div>
+				<a class="content-link" id="visage-rhinoplastie-secConsult">La seconde consultation : le bilan pré-opératoire</a><br>
+				<div class="interventions-slide-content" id="visage-rhinoplastie-secConsult-content">
+					La seconde consultation a  lieu après une première phase de réflexion indispensable au patient et permet d’élaborer plus spécifiquement le projet chirurgical.<br>
+					Un nouvel entretien a systématiquement lieu entre le patient et le chirurgien, afin de rappeler les modalités de l’opération et de s’assurer de la bonne compréhension de l’intervention.
+				</div>
+				<br>
+				<h2 class='visage-title'>L'intervention</h2><br>
+				<a class="content-link" id="visage-rhinoplastie-anesth">L'anesthésie</a><br>
+				<div class="interventions-slide-content" id="visage-rhinoplastie-anesth-content">
+					Un rendez-vous avec l’anesthésiste est organisé plusieurs jours avant l’intervention.<br> 
+					La rhinoplastie se déroule sous anesthésie générale pour le confort du patient.
+				</div>
+				<a class="content-link" id="visage-rhinoplastie-action">L'action chirurgicale</a><br>
+				<div class="interventions-slide-content" id="visage-rhinoplastie-action-content">
+					L’intervention dure le plus souvent entre 1h30 et 2h.<br>
+					Le geste consiste la plus part du temps à retirer une bosse osseuse et à affiner la pointe.<br>
+					Les incisions sont dissimulées à l’intérieur du nez ou parfois sur la columelle (voies externes).<br>
+					L’intervention se termine par la pose d’un plâtre.
+				</div>
+				<a class="content-link" id="visage-rhinoplastie-duree">La durée d'hospitalisation</a><br>
+				<div class="interventions-slide-content" id="visage-rhinoplastie-duree-content">
+					Une nuit post-opératoire est requise. La sortie le lendemain de l’intervention après l’ablation des mèches.
+				</div>
+				<br>
+				<h2 class='visage-title'>Les suites pos-opératoires</h2><br>
+				<a class="content-link" id="visage-rhinoplastie-suivi">Le suivi</a><br>
+				<div class="interventions-slide-content" id="visage-rhinoplastie-suivi-content">
+					Plusieurs consultations de suivi sont assurées : au dixième jour pour l’ablation du plâtre, puis un contrôle à 1 mois et un à 1 an.<br>
+					Les ecchymoses peuvent durer entre 10 et 15 jours.
+				</div>
+				<a class="content-link" id="visage-rhinoplastie-delais">Les délais</a><br>
+				<div class="interventions-slide-content" id="visage-rhinoplastie-delais-content">
+					Les premiers résultats sont observables sous 1 mois et le résultat définitif s’installe en 1 an.
+				</div>
+            </div>
+        </div>
+		 <div class="visage-bottom-content" id="lifting-content">
+			<div class="interventions-bottomRight">
+                <table><tr class="interventions-tr-first"><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-stetho.png') }}"></td><td>Une nuit d'hospitalisation</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-chrono.png') }}"></td><td>2h d'opération</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-moon.png') }}"></td><td>Anesthésie générale</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-arrow.png') }}"></td><td>Résultats sous 1 à 2 mois</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-price.png') }}"></td><td>Entre 5 500 € et 7 500 €</td></tr></table>
+            </div>
+            <div class="interventions-bottomLeft">
+                <h2 class='visage-title'>Le lifting cervico-facial</h2> vise à restaurer l’ovale du visage et de supprimer les rides du cou et les bajoues.<br>
+				Elle consiste à remettre en tension les muscles du visage qui se sont relâchés et de retirer l’excédent cutané.<br>
+				<br>
+				<h2 class='visage-title'>La préparation à l'intervention</h2><br>
+				<a class="content-link" id="visage-lifting-premConsult">La première consultation</a><br>
+				<div class="interventions-slide-content" id="visage-lifting-premConsult-content">
+					Pendant cette première consultation aura lieu :<br>
+					<br>
+					1/ La prise de contact<br>
+					Cette première prise de contact permet de préciser la demande du patient et de connaître ses antécédents médicaux et chirurgicaux.<br>
+					Elle a pour but d’informer des modalités de l’intervention en précisant ses risques et complications éventuelles.<br>
+					<br>
+					2/ L’examen clinique<br>
+					L’examen clinique avant opération est capital car l’intervention dépend de facteurs propres à chaque patient. Il permet d’évoquer les contre-indications (tabagisme) et d’évaluer:<br>
+					- L’état cutané<br>
+					- L’importance du relâchement musculaire<br>
+					- L’épaisseur de la couche graisseuse<br>
+					<br>
+					3/ La remise des documents<br>
+					Pendant cette première consultation, des photos pré-opératoires sont prises.<br>
+					Les modalités opératoires sont expliquées, de même que les risques potentiels.<br>
+					Un consentement opératoire ainsi qu’un devis détaillé et une fiche d’information sont remis au patient.<br>
+					Dans certains cas post-traumatiques, une prise en charge peut-être accordée par l’Assurance Maladie après visite et accord du médecin conseil.
+				</div>
+				<a class="content-link" id="visage-lifting-secConsult">La seconde consultation : le bilan pré-opératoire</a><br>
+				<div class="interventions-slide-content" id="visage-lifting-secConsult-content">
+					La seconde consultation a  lieu après une première phase de réflexion indispensable au patient et permet d’élaborer plus spécifiquement le projet chirurgical.
+				</div>
+				<br>
+				<h2 class='visage-title'>L'intervention</h2><br>
+				<a class="content-link" id="visage-lifting-anesth">L'anesthésie</a><br>
+				<div class="interventions-slide-content" id="visage-lifting-anesth-content">
+					L’intervention se déroule sous anesthésie générale.<br>
+				</div>
+				<a class="content-link" id="visage-lifting-duree">La durée d'hospitalisation</a><br>
+				<div class="interventions-slide-content" id="visage-lifting-duree-content">
+					Elle est de 3 jours environ.
+				</div>
+				<br>
+				<h2 class='visage-title'>Les suites pos-opératoires</h2><br>
+				<a class="content-link" id="visage-lifting-suivi">Le suivi</a><br>
+				<div class="interventions-slide-content" id="visage-lifting-suivi-content">
+					Avant la sortie les drains sont retirés<br>
+					Les pansement est  refait le lendemain de l’intervention<br>
+					Les fils sont retirés au huitième jour et les agrafes sur le cuir chevelu au dixième.
+				</div>
+            </div>
+        </div>
+		<div class="visage-bottom-content" id="oreilles-content">
+			
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+	<script src="{{ asset('js/interventions.js') }}" type="text/javascript"></script>
+{% endblock %}

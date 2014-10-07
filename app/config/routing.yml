@@ -1,0 +1,4 @@
+jack_benzaken_cms:
+    resource: "@JackBenzakenCmsBundle/Resources/config/routing.yml"
+    prefix:   /
+

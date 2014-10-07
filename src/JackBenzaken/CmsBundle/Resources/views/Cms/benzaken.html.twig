@@ -1,0 +1,35 @@
+{# src/Perso/BlogBundle/Resources/views/Blog/benzaken.html.twig #}
+
+{% extends "JackBenzakenCmsBundle::base_frontend.html.twig" %}
+
+{% block body %}
+    <div class="bloc-container" id="benzaken-container">
+		<div class="page-title">
+			<div class="page-title-content" style="color: #3c3c3c;">
+				<span style="font-family:'Museo Sans 100'">Dr Jack</span> Benzaken
+			</div>
+		</div>
+		<div><img style="display:block; margin: 0 auto;" src="{{ asset('img/benzaken.jpg') }}"></div>
+		<div style="margin-top:50px">
+			<!--<div id="benzaken-topContent"><h1>Dr Jack Benzaken</h1></div>-->
+
+			<div id="benzaken-leftContent">
+				<img style="height:465px;" src="{{ asset('img/docteur.jpg') }}">
+			</div>
+			<div id="benzaken-rightContent">
+				<!--Le <strong>Dr Jack Benzaken</strong>, diplômé de la Faculté de Médecine de Paris, est chirurgien Esthétique et Plasticien.-->
+				Le <strong>Dr Jack Benzaken</strong>, diplômé de la Faculté de Médecine de Paris, détient une double spécialité en chirurgie - ORL et esthétique – acquise après 15 ans d’étude à la Faculté de Médecine de Paris. Ces deux spécialités lui confèrent une double approche de la chirurgie: correctrice et réparatrice d’une part, esthétique et reconstructrice d’autre part. Cette double expertise est indispensable pour une intervention qui tienne compte aussi bien de l’aspect esthétique que fonctionnelle de la zone opérée. Le Dr Benzaken complète cette double spécialité par un diplôme de cancérologie cervico faciale.<br>
+				<ul>
+					<li><span class="benzaken-li">Le Dr Benzaken pratique la Chirurgie esthétique depuis plus de 22 ans</span></li>
+					<li><span class="benzaken-li">Il est ancien interne des hôpitaux de la région de Paris</span></li>
+					<li><span class="benzaken-li">Il est qualifié en Chirurgie Cervico Faciale</span></li>
+					<li><span class="benzaken-li">Il est qualifié compétent par le conseil de l'ordre des Médecins en Chirurgie Plastique Reconstructrice et Esthétique</span></li>
+					<li><span class="benzaken-li">Le Dr Benzaken est conventionné avec les régimes d'assurances maladie obligatoires.</span></li>
+				</ul>
+				<div id="benzaken-bottom">
+					La proximité entre son cabinet, sa clinique et son domicile lui permet d'assurer un suivi post opératoire de qualité, indispensable pour l’obtention d’un résultat optimal.
+				</div>
+			</div>
+		</div>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{# src/Perso/BlogBundle/Resources/views/Blog/presse.html.twig #}
+
+{% extends "JackBenzakenCmsBundle::base_frontend.html.twig" %}
+
+{% block body %}
+	<div class="bloc-container">
+		<div class="page-title">
+			<div class="page-title-content">
+				<span style="font-family:'Museo Sans 500'">Presse</span>
+			</div>
+		</div>
+		<div><img style="display:block; margin: 0 auto;" src="{{ asset('img/presse.jpg') }}"></div>
+		
+		<div class="bottom-content" style="width:854px">
+			<div style="margin:0 auto;width:640px">
+				<span style="font-family:'Museo Sans 500';">Interview par Michel Cymes sur le plateau d'Allodocteur - Edition du 17 novembre 2011</span><br><br>
+				<object type="application/x-shockwave-flash" data="http://flv-player.net/medias/player_flv_multi.swf" width="640" height="380">
+					<param name="movie" value="http://flv-player.net/medias/player_flv_multi.swf" />
+					<param name="allowFullScreen" value="true" />
+					<param name="FlashVars" value="flv=http%3A//www.allodocteurs.fr/upload/article/q_rhinoplastie_chirurgien2.flv&amp;title=Un bonnet grâce à la chirurgie (1/3)." />
+				</object>
+			</div>
+		</div>
+	</div>
+{% endblock %}

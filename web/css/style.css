@@ -1,0 +1,471 @@
+/* import font Museo */
+@import url("//hello.myfonts.net/count/2c31f9");
+
+/*reset*/
+* {margin:0; padding:0;}
+html {
+    background-color:#CED0DC;
+    margin:0;
+    padding:0;
+    font-family: Tahoma, serif;
+	overflow-y: scroll;
+	font-size:13px;
+}
+body {
+    background-color:#CED0DC;
+    color:#/*807F84*/525252;
+    width:1000px;
+    background-color:#fff;
+    margin:auto;
+    margin-top:50px;
+}
+
+h1 {
+	font-size:20px;
+	font-weight:normal;
+	font-family: MuseoSans-500;
+}
+
+h2 {
+	font-family: MuseoSans-500;
+}
+
+.title {
+    font-family: MuseoSans-500;
+}
+
+footer {
+    padding-left:30px;
+    padding-top:20px;
+    background-color:#4a484f;
+    color:#fff;
+    border-top:10px solid #CED0DC;
+    /*margin-top:30px;*/
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+hr {
+    color:#CED0DC;
+    background-color:#CED0DC;
+    margin: 20px 0 20px 0;
+}
+
+.questions-title {
+	font-family: Tahoma, serif;
+}
+
+.page-title {
+	width:854px;
+	height:459px;
+	position:absolute;
+}
+
+.page-title-content {
+	background-color: #fff;
+	font-size: 36px;
+	opacity: 0.70;
+	padding: 65px 30px;
+	text-align: center;
+	font-family:MuseoSans-500;
+	margin:auto;
+	width:300px;
+	margin-top:143px;
+}
+#footer-right {
+	font-family: MuseoSans-100;
+    text-align:right;
+    margin-right:30px;
+    font-size: 12px;
+    line-height: 2;
+}
+#footer-right a {
+    color:white;
+    text-decoration:none;
+}
+#footer-left {
+	font-family: MuseoSans-100;
+    float: left;
+    font-size: 12px;
+    line-height: 1.5;
+	color:#fff;
+}
+
+#content {
+}
+
+.bloc-container {
+    width:855px;
+    margin: 0 auto;
+}
+
+.bloc-home {
+	width:855px;
+}
+
+.benzaken-container li {
+    margin-bottom:10px;
+    color:#BE241D;
+    list-style-type:square;
+}
+
+.bloc-bottom {
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+
+/* TOP MENU *****************/
+#logo {
+    padding-top:30px;
+    padding-left:30px;
+    padding-bottom:30px;
+    border-bottom:10px solid #CED0DC;
+}
+.menu-localisator {
+	margin-top:-13px;
+	width:1000px;
+	text-align:left;
+}
+#top-menu{
+    width:100%;
+    font: 13px MuseoSans-100;
+}
+#top-menu ul  {
+    width:1000px;
+}
+#top-menu li {
+    display: inline;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+/*#top-menu #submenu li, */#top-menu #subsubmenu li {
+	/*border-right:1px dashed #807F84;*/
+	background: url("../img/separator_vertical.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+	padding:0 30px;
+}
+#top-menu a{
+    color: #3B3A3E;
+    text-decoration: none;
+	font-size:13px;
+	font-family:MuseoSans-100;
+}
+#top-menu #sections .active {
+    /*color : #BE241D;*/
+	font: 13px MuseoSans-500;
+}
+#top-menu a:hover {
+    /*color:#BE241D;*/
+	/*font-weight:bold;*/
+	font-family:MuseoSans-500;
+	font-size:13px;
+}
+.submenu-item, .menu-item, .content-link {
+    cursor: pointer;
+	/*font-family: MuseoSans-500;*/
+	color:#2a80b9;
+}
+
+.content-link:hover {
+	color:#2b73a3;
+}
+#sections {
+    text-align: center;
+    height: 100px;
+	line-height:100px;
+}
+#submenu, #subsubmenu {
+	display:none;
+    background-color:#4a484f;
+    text-align: center;
+    padding-top:0;
+    height: 50px;
+}
+#submenu li {
+	height:50px;
+	line-height:50px;
+}
+#subsubmenu li {
+	height:50px;
+	line-height:36px;
+}
+
+#submenu a, #subsubmenu a {
+    color:#ebebeb;
+	font: 13px MuseoSans-100;
+}
+
+#submenu a:hover, #subsubmenu a:hover {
+    /*color:#CED0DC;*/
+	font: 13px MuseoSans-500;
+}
+
+#submenu .active, #subsubmenu .active {
+   /* color:#CED0DC;*/
+   font: 13px MuseoSans-500;
+}
+
+.text-indent {
+    display:inline-block;
+   /* height:33%;
+	vertical-align:middle;*/
+}
+    
+.last-section {
+    margin-right:0 !important;
+	border-right:none !important;
+	background:none !important;
+}
+#questions {
+	color: #BE241D !important;
+}
+/* *******************HOME*************/
+#home-bottomLeft {
+    width:273px;
+    height:273px;
+    float:left;
+    margin-right:30px;
+    background-color:#89888c;
+    color:#fff;
+}
+
+#home-bottomLeftContent {
+    padding:30px 45px 15px;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: justify;
+}
+#redbox {
+    background-color: #B54F51;
+    height: 20px;
+    margin-left: -22px;
+    margin-top: -30px;
+    position: absolute;
+    width: 20px;
+    opacity:0.75;
+}
+.bloc-title {
+    border-bottom:1px dashed white;
+    padding-bottom:15px;
+    margin-bottom:15px;
+    text-align:center;
+    font-size:14px;
+	font-family: MuseoSans-500;
+}
+
+.btn-black {
+    text-align:right;
+    background-color:#4a484f;
+    padding:5px;
+    margin-left:155px;
+    padding-right:10px
+}
+
+.btn-black a {
+    color:#fff;
+    text-decoration:none;
+    font-size:11px;
+}
+
+.btn-black a:hover {
+    font-weight:bold;
+}
+
+.btn-redLarge {
+	font-family: MuseoSans-100;
+    text-align:right;
+    background-color:#BE241D;
+    opacity:0.67;
+    padding:5px;
+    margin-left:589px;
+    margin-top:176px;
+    padding-right:30px;
+    padding-left:30px;
+    padding-top:15px;
+    position:absolute;
+    line-height:1;
+    color:white;
+    padding-bottom:5px;
+    font-size:13px;
+}
+
+.btn-redQuestion {
+    background-color: #be241d;
+	font-family: MuseoSans-500;
+    color: white;
+    font-size: 15px;
+    line-height: 1;
+    margin-left: 722px;
+    margin-top: 326px;
+    opacity: 0.67;
+    padding: 35px 30px 19px;
+    position: absolute;
+    text-align: center;
+}
+/*** INTERVENTIONS ***/
+/*** CUSTOM CHIFFRES AU LIEU DE PICTOS **/
+.interventions-img {
+	padding-bottom:50px;
+}
+.slide-link {
+	font-size:18px;
+	color:white;
+	vertical-align:middle;
+	font-family: MuseoSans-500;
+}
+#visage-top-content {
+    position:absolute;
+    margin-top:80px;
+    color:#2A80B9;
+}
+.visage-bottom-content {
+    display:none;
+    /*margin-top:50px;*/
+}
+
+.bottom-content {
+	margin-top:50px;
+	margin-bottom:50px;
+}
+.slide-button {
+    color:white;
+    margin:50px 0;
+    min-width:0px;
+}
+
+.slide-subsection {
+   position:absolute;
+    left:55px;
+    top:0;
+    list-style-type:none;
+    color:white;
+}
+.slide-subsection-li {
+    background-color:#2A80B9;
+    display:none;
+    width:230px;
+    height: 60px;
+	line-height:60px;
+    cursor:pointer;
+	text-align:center;
+}
+
+.slide-subsection-link {
+    color:white;
+    text-decoration:none;
+    font-size: 18px;
+    padding-left:0px;
+	padding-top:10px;
+	font-family: "Museo Sans 100";
+}
+.slide-section-link {
+	margin:0;
+	padding:0;
+	height:60px;
+	/*** CUSTOM CHIFFRES AU LIEU DE PICTOS **/
+	width:60px;
+	background-color:#2a80b9;
+	line-height:55px;
+	text-align:center;
+}
+
+.slide-pictos {
+    margin:0;
+    width:50px;
+    background-color:#2A80B9;
+}
+.interventions-pictos {
+    margin:0;
+    width:30px;
+	margin-right:30px;
+}
+.visage-title {
+    color:#2A80B9;
+	font-size: 16px;
+    font-weight: normal;
+	display:inline;
+}
+
+.interventions-slide-content{
+	display:none;
+	/*padding-bottom:30px;*/
+}
+#visage-blepharoplastie-premConsult-content {
+    margin-top:0px;
+}
+/***** BENZAKEN ***/
+#benzaken-rightContent {
+	text-align:justify;
+}
+#benzaken-bottom {
+    background-color: #89888C;
+    color: #FFFFFF;
+    padding: 20px;
+    margin-left:370px;
+    margin-top:43px;
+	margin-bottom:30px;
+}
+
+#benzaken-container ul {
+	list-style-type: square;
+	color: #BE241D;
+	list-style-position:inside;
+}
+#benzaken-container ul li {
+	padding-top:15px;
+}
+
+#benzaken-leftContent {
+	float:left;
+	margin-right:50px;
+}
+
+#benzaken-topContent {
+	color:#BE241D;
+	border-bottom:1px dashed #CED0DC;
+	padding-bottom:20px;
+	margin-bottom:30px;
+}
+
+.benzaken-li {
+    color:#000;
+}
+/****INTERVENTIONS****/
+.interventions-menu {
+	position:absolute;
+	top:35px;
+}
+.interventions-title {
+	padding-left:10px;
+	height:10px;
+	font-family:MuseoSans-100;
+	font-size:18px;
+}
+.interventions-bottomRight {
+	float:right;
+	font-family: MuseoSans-100;
+	font-size:15px;
+}
+.interventions-bottomRight  table tr td{
+	padding-top:30px;
+}
+.interventions-tr-first td {
+	padding-top:0 !important;
+}
+.interventions-bottomLeft {
+	width:65%;
+	padding-right:50px;
+	padding-bottom:50px;
+	text-align:justify;
+	/*background:url(../img/line.png) top right no-repeat;*/
+}
+/********** CLINIQUE ***********/
+.clinique-bottomLeft {
+	width:65%;
+	text-align:justify;
+}
+.clinique-bottomRight {
+	float:right;
+	width:24%;
+}

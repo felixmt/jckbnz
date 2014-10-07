@@ -1,0 +1,59 @@
+index:
+    pattern:  /
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:index }
+
+benzaken:
+    pattern:  /jack-benzaken
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:benzaken }
+
+visage:
+    pattern:  /femme/le-visage
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:visage  }
+
+questions:
+    pattern:  /questions
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:questions }
+
+clinique:
+    pattern:  /la-clinique
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:clinique }
+
+cabinet:
+    pattern:  /le-cabinet
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:cabinet }
+
+presse:
+    pattern:  /presse
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:presse }
+
+poitrine:
+    pattern:  /femme/la-poitrine
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:poitrine }
+
+silhouette:
+    pattern:  /femme/la-silhouette
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:silhouette }
+
+silhouetteH:
+    pattern:  /homme/la-silhouette
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:silhouetteH }
+
+mentions:
+    pattern:  /mentions-legales
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:mentions }
+
+rides:
+    pattern:  /femme/le-traitement-des-rides
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:rides }
+
+ridesH:
+    pattern:  /homme/le-traitement-des-rides
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:ridesH }
+
+dermatologique:
+    pattern:  /la-chirurgie-dermatologique
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:dermatologique }
+
+dermatologiqueH:
+    pattern:  /la-chirurgie-dermatologique
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:dermatologique }

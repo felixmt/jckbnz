@@ -1,0 +1,90 @@
+{# src/Perso/BlogBundle/Resources/views/Blog/dermatologique.html.twig #}
+
+{% extends "JackBenzakenCmsBundle::base_frontend.html.twig" %}
+
+{% block body  %}
+    <div class="bloc-container">
+        <div id="visage-top-content">
+			<div class="interventions-title">LA CHIRURGIE DERMATOLOGIQUE</div>
+        </div>
+        <div class="interventions-img"><img style="display:block; margin: 0 auto;" src="{{ asset('img/dermatologique.jpg') }}"></div>
+        <div class="visage-bottom-content" id="blepharoplastie-content">
+            <div class="interventions-bottomRight">
+                <table><tr class="interventions-tr-first"><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-stetho.png') }}"></td><td>Ambulatoire</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-chrono.png') }}"></td><td>1-2h d'opération</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-moon.png') }}"></td><td>Anesthésie locale</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-arrow.png') }}"></td><td>Résultats sous 15 jours</td></tr>
+                <tr><td><img class="interventions-pictos" src="{{ asset('img/picto-interventions-price.png') }}"></td><td>Entre 1 500 € et 3 000 €</td></tr></table>
+            </div>
+            <div class="interventions-bottomLeft">
+                <h2 class='visage-title'>La chirurgie des paupières</h2> a pour but:<br>
+				- Au niveau de la paupière supérieure: de supprimer l’excès cutané et de corriger l’aspect de paupière tombante en redonnant ainsi au regard un nouvel éclat<br>
+				-  Au niveau de la paupière inferieure: de corriger les poches graisseuses et à un moindre degré de réduire l’excès cutané<br>
+				Suivant la demande et de la nature des anomalies constatées, le patient aura le choix de corriger soit seulement les paupières supérieures, soit les paupières supérieures et inférieures.<br>
+				<br>
+				<h2 class='visage-title'>La préparation à l'intervention</h2><br>
+				<a class="content-link" id="visage-blepharoplastie-premConsult">La première consultation</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-premConsult-content">
+					Pendant cette première consultation aura lieu :<br>
+					<br>
+					1/ La prise de contact<br>
+					Cette première prise de contact permet de préciser la demande du patient et de connaître ses antécédents médicaux et chirurgicaux.<br>
+					Elle a pour but d’informer des modalités de l’intervention en précisant ses risques et complications éventuelles.<br>
+					<br>
+					2/ L’examen clinique<br>
+					L’examen clinique des paupières avant opération est capital car l’intervention dépend de facteurs propres à chaque patient. Il permet d’évaluer:<br>
+					- La qualité, l’élasticité et l’épaisseur de la peau<br>
+					- La présence de poches graisseuses<br>
+					- Les contre indications ophtalmologiques à cette intervention (hypertension oculaire, œil sec)<br>
+					<br>
+					3/ La remise des documents<br>
+					Pendant cette première consultation, des photos pré-opératoires sont prises.<br>
+					Les modalités opératoires sont expliquées, de même que les risques potentiels.<br>
+					Un consentement opératoire ainsi qu’un devis détaillé et une fiche d’information sont remis au patient.<br>
+					En cas de chute importante de la paupière supérieure responsable d’une gène visuelle ,une prise en charge par la sécurité est possible.
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-secConsult">La seconde consultation : le bilan pré-opératoire</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-secConsult-content">
+				La seconde consultation a  lieu après une première phase de réflexion indispensable au patient et permet d’élaborer plus spécifiquement le projet chirurgical.<br>
+				Un nouvel entretien a systématiquement lieu entre le patient et le chirurgien, afin de rappeler les modalités de l’opération et de s’assurer de la bonne compréhension de l’intervention.<br>
+				Un examen ophtalmologique est parfois demandé.
+				</div>
+				<br>
+				<h2 class='visage-title'>L'intervention</h2><br>
+				<a class="content-link" id="visage-blepharoplastie-anesth">L'anesthésie</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-anesth-content">
+					L’intervention se déroule sous anesthésie locale pour la paupière supérieure. Une consultation avec l’anesthésiste est nécessaire quelques jours avant l’intervention.<br>
+					Pour les quatre paupières on pourra avoir recours à une neurolept-analgésie (anesthésie locale renforcée),voire à une anesthésie générale
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-action">L'action chirurgicale</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-action-content">
+					La durée de l’intervention est de 1h pour les paupières supérieures et de 2h pour les quatre paupières.<br>
+					Pour la paupière supérieure la cicatrice est dissimulé dans le pli palpébral.<br>
+					Pour la paupière inferieure elle peut se faire soit sous les cils soit par voie endo-conjonctivale.<br>
+					La quantité de peau à retirer à la paupière inferieure est très limitée afin d’éviter des complications (œil rond).
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-duree">La durée d'hospitalisation</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-duree-content">
+					Les paupières supérieures peuvent se faire en ambulatoire (sortie le jour même).<br>
+					Pour les quatre paupières une nuit post-opératoire est souvent proposée.
+				</div>
+				<br>
+				<h2 class='visage-title'>Les suites post-opératoires</h2><br>
+				<a class="content-link" id="visage-blepharoplastie-suivi">Le suivi</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-suivi-content">
+					Plusieurs consultations de suivi sont assurées:<br>
+					Les fils sont retirés entre le sixième et le huitième jour, une consultation de contrôle à lieu au bout d’1 mois puis au bout d’ 1 an<br>
+					Des compresses glacées sont également à appliquer sur les yeux les deux premiers jours.
+				</div>
+				<a class="content-link" id="visage-blepharoplastie-delais">Les délais</a><br>
+				<div class="interventions-slide-content" id="visage-blepharoplastie-delais-content">
+					Le résultat est appréciable sous 15 jours.<br>
+					Les cicatrices peuvent être maquillées au huitième jour.
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+	<script src="{{ asset('js/interventions.js') }}" type="text/javascript"></script>
+{% endblock %}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="screen,handheld,print" />
+    <link rel="stylesheet" href="{{ asset('css/MyFontsWebfontsKit.css') }}" type="text/css" media="screen,handheld,print" />
+     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <title>{% block title %}Dr Jack Benzaken{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    {% set canonical = app.request.attributes.get('_route') %}
+    <link rel="canonical" href="{{ url(canonical) }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+	<!--<script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=159302(font-family=Museo+Sans+100)&sid=159306(font-family=Museo+Sans+700)&sid=159303(font-family=Museo+Sans+500)&key=DJbkJOo082',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+</script>
+<script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=159305(font-family=Museo+Sans+300)&sid=159306(font-family=Museo+Sans+700)&sid=159303(font-family=Museo+Sans+500)&sid=159302(font-family=Museo+Sans+100)&key=Xo0Mzxd11u',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+</script>-->
+</head>
+<body>
+    <div id="content">
+        {# TOP MENU #}
+        <div id="top-menu">
+            <div id="logo"><a href="{{ path('index') }}"><img src= "{{ asset('img/logo.png') }}"></a></div>
+            <div id="submenu">
+            </div>
+            <div id="subsubmenu">
+            </div>
+            <div id="sections"><span style="display: inline-block;">
+                <ul>
+                    <li><a id="benzaken" class="menu-item {% if canonical == 'benzaken' %} active {% endif %}" href="{{ path('benzaken') }}">Dr Jack Benzaken</a></li>
+                    <li style="border-left:1px dotted #fff;"><a id='interventions'  class="menu-item {% if canonical == 'visage' or canonical == 'silhouette' or canonical == 'silhouetteH' or canonical == 'poitrine' or canonical == 'rides' or canonical == 'ridesH' or canonical == 'dermatologique' or canonical == 'dermatologiqueH' %} active {% endif %}">Les interventions</a></li>
+                    <li><a id="lieux" class="menu-item {% if canonical == 'clinique' or canonical == 'cabinet' %} active {% endif %}">Les lieux</a></li>
+                    <li><a id="presse" class="menu-item {% if canonical == 'presse' %} active {% endif %}	" href="{{ path('presse') }}">Presse</a></li>
+                    <li><a id="actualites" class="menu-item {% if canonical == 'actualites' %} active {% endif %}"" href="#">Actualités</a></li>
+                    <li class="menu-item last-section"><a id="questions" href="{{ path('questions') }}">Vos questions</a></li>
+                </ul></span>
+            </div>
+        </div>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </div>
+    <script>
+        $( document ).ready(function() {
+            if ('{{ canonical }}' == 'visage' || '{{ canonical }}' == 'rides' || '{{ canonical }}' == 'dermatologique' || '{{ canonical }}' == 'poitrine' || '{{ canonical }}' == 'silhouette') {
+			   setInterventionsItems();
+               setInterventionsFemmeItems();
+			   $('#submenu').hide(0).delay(500).slideToggle(500);
+               $('#subsubmenu').hide(0).delay(500).slideToggle(500);
+		   } else if ('{{ canonical }}' == 'silhouetteH' || '{{ canonical }}' == 'ridesH' || '{{ canonical }}' == 'dermatologiqueH') {
+               setInterventionsItems();
+               setInterventionsHommeItems();
+			   $('#submenu').hide(0).delay(500).slideToggle(500);
+               $('#subsubmenu').hide(0).delay(500).slideToggle(500);
+			} else if ('{{ canonical }}' == 'clinique' || '{{ canonical }}' == 'cabinet') {
+				setLieuxItems ();
+				$('#subsubmenu').hide();
+				$('#submenu').hide(0).delay(500).slideToggle(500);
+			} else {
+                $('#submenu').hide();
+                $('#subsubmenu').hide();
+            }
+        });
+        $('.menu-item').click(function() {
+            var current_item = $(this).parent().parent().find('.active').attr('id');
+            if ($(this).attr('id') == 'interventions') {
+                $("#sections ul li a").removeClass('active');
+                $(this).addClass('active');
+                setInterventionsItems();
+
+                if ( $( "#submenu" ).is( ":hidden" ) ) {
+                    $( "#submenu" ).slideDown( "slow" );
+                } else {
+                    $('#subsubmenu').slideUp();
+                    $( "#submenu" ).slideUp();
+                    if ($("#submenu span ul li a").attr('id') == 'femme' && current_item != "interventions") {
+                        //console.log("susubmenu item : " + $("#submenu span ul li a").attr('id') + "current_item : " + current_item);
+                        $( "#submenu" ).slideDown( "slow" );
+                    } else {
+						if ( !(($(this).attr('id') == 'interventions' && ('{{ canonical }}' == 'visage' || '{{ canonical }}' == 'silhouette' || '{{ canonical }}' == 'silhouetteH' || '{{ canonical }}' == 'poitrine' || '{{ canonical }}' == 'rides' || '{{ canonical }}' == 'dermatologique')) || ($(this).attr('id') == 'lieux' && ('{{ canonical }}' == 'clinique' || '{{ canonical }}' == 'cabinet'))));
+							$(this).removeClass('active');
+                        $('#{{ canonical }}').addClass('active');
+                    }
+                }
+            } else if ($(this).attr('id') == 'lieux') {
+                $("#sections ul li a").removeClass('active');
+                $(this).addClass('active');
+                setLieuxItems();
+
+                if ( $( "#submenu" ).is( ":hidden" ) ) {
+                    $( "#submenu" ).slideDown( "slow" );
+                } else {
+                    $('#subsubmenu').slideUp();
+                    $( "#submenu" ).slideUp();
+                    if (($("#submenu span ul li a").attr('id') == 'clinique' || $("#submenu span ul li a").attr('id') == 'cabinet') && current_item != "lieux") {
+						//console.log($("#submenu span ul li a").attr('id'));
+						$( "#submenu" ).slideDown( "slow" );
+                    } else {
+                        $(this).removeClass('active');
+                        $('#{{ canonical }}').addClass('active');
+                    }
+                }
+            }
+        });
+
+        $(document).on('click', '.submenu-item', function(e) {
+			var current_item = $("#submenu .text-indent ul li").find('.active').attr('id');
+			//console.log(current_item);
+			$("#submenu ul li a").removeClass('active');
+			$(this).addClass('active');
+            if ($(this).attr('id') == 'femme') {
+                setInterventionsFemmeItems();
+            } else if ($(this).attr('id') == 'homme') {
+                setInterventionsHommeItems();
+            }
+            if($(this).attr('id') != "clinique" && $(this).attr('id') != "cabinet") {
+                if ( $( "#subsubmenu" ).is( ":hidden" ) ) {
+                    $( "#subsubmenu" ).slideDown( "slow" );
+                } else if (current_item != $(this).attr('id')) {
+					$( "#subsubmenu" ).slideUp();
+					$( "#subsubmenu" ).slideDown();
+				} else {
+                    $( "#subsubmenu" ).slideUp();
+                }
+            }
+        });
+
+        function setInterventionsItems () {
+            $('#submenu').empty();
+            $('#submenu').append('<span class="text-indent"><ul><li><a class="submenu-item {% if canonical == "visage" or canonical == "silhouette" or canonical == "poitrine" or canonical == "rides" or canonical == "dermatologique" %} active {% endif %}" id="femme">Femme</a></li><li class="last-section"><a class="submenu-item {% if canonical == "silhouetteH" or canonical == "ridesH" or canonical == "dermatologiqueH" %} active {% endif %}" id="homme">Homme</a></li></ul></span><div class="menu-localisator" style="margin-left:318px;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
+        }
+        function setInterventionsFemmeItems () {
+            $('#subsubmenu').empty();
+            $('#subsubmenu').append('<span class="text-indent"><ul><li><a class="{% if canonical == "visage" %} active {% endif %}" id="visage" href="{{ path("visage") }}">Le visage</a></li><li><a class="{% if canonical == "silhouette" %} active {% endif %}" id="silhouette" href="{{ path("silhouette") }}">La silhouette</a></li><li><a class="{% if canonical == "poitrine" %} active {% endif %}" id="poitrine" href="{{ path('poitrine') }}">La poitrine</a></li><li><a class="{% if canonical == "rides" %} active {% endif %}" id="rides" href="{{ path("rides") }}">Le traitement des rides</a></li><li class="last-section"><a class="{% if canonical == "dermatologique" %} active {% endif %}" id="dermatologie" href="{{ path("dermatologique") }}">La chirurgie dermatologique</a></li></ul></span><div class="menu-localisator" style="margin-left:318px;margin-top:0;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
+        }
+		function setInterventionsHommeItems () {
+            $('#subsubmenu').empty();
+            $('#subsubmenu').append('<span class="text-indent"><ul><li><a class="{% if canonical == "visageH" %} active {% endif %}" id="visageH" href="#">Le visage</a></li><li><a class="{% if canonical == "silhouetteH" %} active {% endif %}" id="silhouetteH" href="{{ path("silhouetteH") }}">La silhouette</a></li><li><a class="{% if canonical == "sommeilH" %} active {% endif %}" id="sommeilH" href="#">Traitement du sommeil</a></li><li><a class="{% if canonical == "ridesH" %} active {% endif %}" id="ridesH" href="{{ path("ridesH") }}">Le traitement des rides</a></li><li class="last-section"><a class="{% if canonical == "dermatologique" %} active {% endif %}" id="dermatologieH" href="{{ path("dermatologiqueH") }}">La chirurgie dermatologique</a></li></ul></span><div class="menu-localisator" style="margin-left:318px;margin-top:0;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
+        }
+        function setLieuxItems () {
+            $('#submenu').empty();
+            $('#submenu').append('<span class="text-indent"><ul><li class="last-section"><a class="submenu-item {% if canonical == "cabinet" %} active {% endif %}" id="cabinet" href="{{ path("cabinet") }}">Le Cabinet</a></li><li><a class="submenu-item {% if canonical == "clinique" %} active {% endif %}" id="clinique" href="{{ path("clinique") }}">La Clinique</a></li></ul></span><div class="menu-localisator" style="margin-left:470px;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
+        }
+    </script>
+</body>
+<footer>
+<div id="footer-left"><span style="font-family: MuseoSans-500;">Cabinet Jack Benzaken</span><br>
+49, Avenue Thiers<br>
+93340 Le Raincy<br>
+01 43 00 28 28</div>
+<div id="footer-right">
+    <a href="{{ path('cabinet') }}">Localiser sur le plan</a><br>
+    <a href="{{ path('cabinet') }}">Prendre un rendez-vous</a><br>
+    <a href="{{ path('mentions') }}">Mentions légales</a>
+</div>
+</footer>
+</html>
