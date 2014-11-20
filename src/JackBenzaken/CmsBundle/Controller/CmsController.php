@@ -8,6 +8,11 @@ class CmsController extends Controller
 {
     public function defaultAction($templateName)
     {
-        return $this->render('JackBenzakenCmsBundle:Cms:' . $templateName . '.html.twig');
+		$response = $this->render('JackBenzakenCmsBundle:Cms:' . $templateName . '.html.twig');
+		$response->setPublic();
+		$response->setMaxAge(600);
+		$response->setSharedMaxAge(600);
+		
+		return $response;
     }
 }

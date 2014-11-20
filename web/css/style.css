@@ -7,9 +7,9 @@ html {
     background-color:#CED0DC;
     margin:0;
     padding:0;
-    font-family: Tahoma, serif;
+    font-family: Arial, serif;
 	overflow-y: scroll;
-	font-size:13px;
+	font-size:12px;
 }
 body {
     background-color:#CED0DC;
@@ -17,7 +17,11 @@ body {
     width:1000px;
     background-color:#fff;
     margin:auto;
-    margin-top:50px;
+    margin-top:20px;
+}
+
+a {
+	cursor: pointer;
 }
 
 h1 {
@@ -53,6 +57,9 @@ hr {
     margin: 20px 0 20px 0;
 }
 
+.cursor {
+	cursor: pointer !important;
+}
 .questions-title {
 	font-family: Tahoma, serif;
 }
@@ -61,6 +68,10 @@ hr {
 	width:854px;
 	height:459px;
 	position:absolute;
+}
+
+.page-title-soft {
+	font-family:MuseoSans-100;
 }
 
 .page-title-content {
@@ -93,6 +104,21 @@ hr {
 	color:#fff;
 }
 
+#footer-left a{
+	color:#fff;
+	text-decoration:none;
+}
+
+.clinique-bottomRight a {
+	color:#717172;
+	text-decoration:none;
+}
+
+.presse-video-title {
+	font-family: MuseoSans-500;
+	width:100%;
+	text-align:center;
+}
 #content {
 }
 
@@ -121,7 +147,7 @@ hr {
     padding-top:30px;
     padding-left:30px;
     padding-bottom:30px;
-    border-bottom:10px solid #CED0DC;
+    border-bottom:9px solid #CED0DC;
 }
 .menu-localisator {
 	margin-top:-13px;
@@ -148,27 +174,29 @@ hr {
 #top-menu a{
     color: #3B3A3E;
     text-decoration: none;
-	font-size:13px;
+	font-size:14px;
 	font-family:MuseoSans-100;
 }
 #top-menu #sections .active {
     /*color : #BE241D;*/
-	font: 13px MuseoSans-500;
+	font-family: MuseoSans-500;
 }
-#top-menu a:hover {
+#top-menu #submenu a:hover, #top-menu #subsubmenu a:hover, #top-menu #sections a:hover {
     /*color:#BE241D;*/
 	/*font-weight:bold;*/
 	font-family:MuseoSans-500;
-	font-size:13px;
 }
 .submenu-item, .menu-item, .content-link {
-    cursor: pointer;
 	/*font-family: MuseoSans-500;*/
 	color:#2a80b9;
 }
 
+.content-link {
+	cursor:auto;
+}
+
 .content-link:hover {
-	color:#2b73a3;
+	/*color:#2b73a3;*/
 }
 #sections {
     text-align: center;
@@ -193,17 +221,17 @@ hr {
 
 #submenu a, #subsubmenu a {
     color:#ebebeb;
-	font: 13px MuseoSans-100;
+	font: 14px MuseoSans-100;
 }
 
 #submenu a:hover, #subsubmenu a:hover {
     /*color:#CED0DC;*/
-	font: 13px MuseoSans-500;
+	font-family: MuseoSans-500;
 }
 
 #submenu .active, #subsubmenu .active {
    /* color:#CED0DC;*/
-   font: 13px MuseoSans-500;
+   font-family: MuseoSans-500;
 }
 
 .text-indent {
@@ -231,22 +259,23 @@ hr {
 }
 
 #home-bottomLeftContent {
-    padding:30px 45px 15px;
+    padding:30px 45px 20px;
     font-size: 12px;
     line-height: 1.6;
     text-align: justify;
 }
 #redbox {
-    background-color: #B54F51;
+    background-color: #b01e1e;
     height: 20px;
     margin-left: -22px;
     margin-top: -30px;
     position: absolute;
     width: 20px;
-    opacity:0.75;
+    opacity:0.65;
 }
 .bloc-title {
-    border-bottom:1px dashed white;
+    /*border-bottom:1px dashed white;*/
+	background: url("../img/separator_horizontal.png") no-repeat scroll bottom rgba(0, 0, 0, 0);
     padding-bottom:15px;
     margin-bottom:15px;
     text-align:center;
@@ -267,19 +296,16 @@ hr {
     text-decoration:none;
     font-size:11px;
 }
-
-.btn-black a:hover {
-    font-weight:bold;
+.btn-red {
+	background-color:#b01e1e;
+    opacity:0.78;
 }
-
 .btn-redLarge {
 	font-family: MuseoSans-100;
     text-align:right;
-    background-color:#BE241D;
-    opacity:0.67;
     padding:5px;
-    margin-left:589px;
-    margin-top:176px;
+    margin-left:587px;
+    margin-top:171px;
     padding-right:30px;
     padding-left:30px;
     padding-top:15px;
@@ -291,14 +317,12 @@ hr {
 }
 
 .btn-redQuestion {
-    background-color: #be241d;
 	font-family: MuseoSans-500;
     color: white;
     font-size: 15px;
     line-height: 1;
     margin-left: 722px;
     margin-top: 326px;
-    opacity: 0.67;
     padding: 35px 30px 19px;
     position: absolute;
     text-align: center;
@@ -314,10 +338,20 @@ hr {
 	vertical-align:middle;
 	font-family: MuseoSans-500;
 }
-#visage-top-content {
+.interventions-top-content {
     position:absolute;
     margin-top:80px;
     color:#2A80B9;
+}
+
+.interventions-menu-1elem {
+	margin-top: 180px;
+}
+.interventions-menu-2elem {
+	margin-top: 155px;
+}
+.interventions-menu-3elem{
+	margin-top: 110px;
 }
 .visage-bottom-content {
     display:none;
@@ -327,6 +361,7 @@ hr {
 .bottom-content {
 	margin-top:50px;
 	margin-bottom:50px;
+	line-height:1.5;
 }
 .slide-button {
     color:white;
@@ -357,7 +392,7 @@ hr {
     font-size: 18px;
     padding-left:0px;
 	padding-top:10px;
-	font-family: "Museo Sans 100";
+	font-family: MuseoSans-100;
 }
 .slide-section-link {
 	margin:0;
@@ -370,11 +405,11 @@ hr {
 	text-align:center;
 }
 
-.slide-pictos {
+/*.slide-pictos {
     margin:0;
     width:50px;
     background-color:#2A80B9;
-}
+}*/
 .interventions-pictos {
     margin:0;
     width:30px;
@@ -387,8 +422,12 @@ hr {
 	display:inline;
 }
 
+.visage-main-title{
+	font-family: Tahoma, serif;
+}
+
 .interventions-slide-content{
-	display:none;
+	/*display:none;*/
 	/*padding-bottom:30px;*/
 }
 #visage-blepharoplastie-premConsult-content {
@@ -397,14 +436,16 @@ hr {
 /***** BENZAKEN ***/
 #benzaken-rightContent {
 	text-align:justify;
+	line-height:1.5;
 }
 #benzaken-bottom {
     background-color: #89888C;
     color: #FFFFFF;
     padding: 20px;
-    margin-left:370px;
-    margin-top:43px;
+    margin-left:392px;
+    margin-top:26px;
 	margin-bottom:30px;
+	font-family: MuseoSans-100;
 }
 
 #benzaken-container ul {
@@ -448,7 +489,7 @@ hr {
 	font-size:15px;
 }
 .interventions-bottomRight  table tr td{
-	padding-top:30px;
+	padding-top:24px;
 }
 .interventions-tr-first td {
 	padding-top:0 !important;
@@ -458,7 +499,11 @@ hr {
 	padding-right:50px;
 	padding-bottom:50px;
 	text-align:justify;
+	line-height:1.5;
 	/*background:url(../img/line.png) top right no-repeat;*/
+}
+.interventions-video {
+	margin-left:25px;
 }
 /********** CLINIQUE ***********/
 .clinique-bottomLeft {
@@ -468,4 +513,24 @@ hr {
 .clinique-bottomRight {
 	float:right;
 	width:24%;
+}
+
+/************* ACTUALITES ****************/
+.actualites-item h3 {
+	font-size:13px;
+	font-weight:normal;
+	color:#2a80b9;
+}
+.actualites-item {
+	text-align:justify;
+}
+
+.actualites-item-content {
+	display:none;
+}
+
+.actualites-images {
+	float:left;
+	padding-right:30px;
+	padding-bottom:10px;
 }

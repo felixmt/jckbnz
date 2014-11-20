@@ -51,9 +51,21 @@ ridesH:
     defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:ridesH }
 
 dermatologique:
-    pattern:  /la-chirurgie-dermatologique
+    pattern:  /femme/la-chirurgie-dermatologique
     defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:dermatologique }
 
 dermatologiqueH:
-    pattern:  /la-chirurgie-dermatologique
-    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:dermatologique }
+    pattern:  /homme/la-chirurgie-dermatologique
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:dermatologiqueH }
+
+sommeil:
+    pattern:  /homme/le-traitement-du-sommeil
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:sommeil }
+
+visageH:
+    pattern:  /homme/le-visage
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:visageH }
+
+actualites:
+    pattern:  /actualites
+    defaults: { _controller: JackBenzakenCmsBundle:Cms:default, templateName:actualites }

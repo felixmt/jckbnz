@@ -1,0 +1,71 @@
+{# src/Perso/BlogBundle/Resources/views/Blog/actualites.html.twig #}
+
+{% extends "JackBenzakenCmsBundle::base_frontend.html.twig" %}
+
+{% block body %}
+	<div class="bloc-container">
+		<div class="page-title">
+			<div class="page-title-content" style="margin-top:125px;">
+				<span class="page-title-soft">L'Actualité</span> Esthétique
+			</div>
+		</div>
+		<div><img style="display:block; margin: 0 auto;" src="{{ asset('img/actualites.jpg') }}"></div>
+		
+		<div class="bottom-content">
+			<div class="actualites-item">
+				<img class="actualites-images"src="{{ asset('img/actualites_1.jpg') }}" width=400px;>
+				<h2 class='visage-title'>10 questions à vous poser avant un acte esthétique <br>(Nov 2014)</h2><br><br>
+				<h3>A qui dois-je m'adresser ?</h3>
+				Le praticien que vous choisirez pourra vous être recommandé par vos amis ou votre médecin. Vous pourrez également le trouver sur le net. Dans tous les cas, assurez vous qu’il possède les compétences nécessaires par son inscription au Conseil de l’Ordre des Médecins, ses compétences et  ses diplômes. <strong>Vous adresser à un chirurgien qualifié en chirurgie plastique, reconstructrice et esthétique est un gage de compétence.</strong>
+				<br><br>
+				<!-- bloc à dupliquer pour ajouter une actualité ----------------------------------------------------->
+				<div class="actualites-item-content" id="actualites-item-1-content"><!--incrémenter la valeur, il ne doit pas y avoir de doublons-->
+					<h3>Comment se déroule une consultation ?</h3>
+					Lors d’une première consultation, le chirurgien doit vous écouter entièrement, comprendre votre demande et l’analyser. Il pourra alors vous expliquer en détails les possibilités adaptées à votre cas.<br>
+					Vous devrez prendre le temps de poser toutes les questions qui vous viennent à l’esprit.  Aucune question n’est idiote.<br>
+					Des fiches d’informations et un devis détaillé vous seront remis.
+					<br><br>
+					<h3>Comment se déroulera l'intervention ?</h3>
+					Votre praticien devra vous expliquer en détail  la procédure médicale, la durée de l’acte, le ressenti et les effets secondaires qui pourraient survenir.
+					<br><br>
+					<h3>Est-ce qu'il y a des précautions particulières à prendre ?</h3>
+					Il faudra bien préciser les médicaments que vous prenez, vos antécédents médicaux,chirurgicaux et vos allergies éventuelles, afin de minimiser les risques liés à l’acte esthétique.<br>
+					Pour la chirurgie, il est important de réduire ou d’arrêter la consommation de cigarette.<br>
+					Pour tout acte, la prise d’aspirine ou d’anti-inflammatoires est déconseillée pendant les 8 jours avant.
+					<br><br>
+					<h3>Qui réalisera l'acte ?</h3>
+					C’est le praticien <strong>que vous avez rencontré en consultation  qui doit réaliser l’acte esthétique.</strong>
+					<br><br>
+					<h3>Que puis-je faire après un acte esthétique ?</h3>
+					Il faudra bien demander à votre praticien si vous pourrez retravailler et avoir une vie sociale normale, vous maquiller immédiatement après ou pas (en général, pour de la médecine esthétique, oui). Le sport doit en général être évité le jour même.<br>
+					Pour une intervention chirurgicale, demandez bien quelle est la période prévisible d’arrêt de travail, d’arrêt de sport, les recommandations (drainages, vêtements, crèmes ..).
+					<br><br>
+					<h3>Est-ce douloureux ?</h3>
+					Les gestes de médecine esthétiques peuvent être inconfortables, sans douleur persistante après l’acte. Pour plus de confort, une crème anesthésiante vous sera généralement prescrite. Pour certaines zones (lèvres), une anesthésie locale pourra être réalisée.
+					<br><br>
+					Pour les actes chirurgicaux, la douleur peut être minime ou parfois plus importante. L’évolution des techniques chirurgicales et l’utilisation d’anesthésiants locaux pendant l’intervention  réduisent considérablement la douleur post opératoire. Cependant, un traitement par des antalgiques vous sera systématiquement prescrit pour votre confort.
+					<br><br>
+					<h3>Quel est le prix global ?</h3>
+					En médecine esthétique, le prix est fonction du produit utilisé et de sa quantité. Le praticien doit vous remettre un devis précis avant toute injection.<br>
+					En chirurgie, le tarif dépend de l’acte précis et du temps prévu pour l’intervention. La aussi, un devis détaillé vous sera remis avant, incluant les consultations post opératoires.<br>
+					Dans tous les cas, un tarif au rabais pour de la chirurgie ou de la médecine esthétique doit éveiller la méfiance sur la qualité des soins réalisés. 
+					<h3>Combien de temps dure le résultat ?</h3>
+					Pour la médecine esthétique, la durée d’action de chaque produit est différente. Pour la toxine botulique, le traitement devra en général être renouvelé 2 fois par an. Pour l’acide hyaluronique, selon le produit (plus ou moins réticulé)  et l’endroit injecté, l’effet pourra durer de 6 mois à 3 ans.<br>
+					Pour la chirurgie, l’effet rajeunissant sur le visage dure environ de 10 à 15 ans. Pour les implants mammaires, un changement sera nécessaire après 10 à 15 ans.  En revanche, certains actes ont un effet définitif (rhinoplastie, chirurgie de la silhouette sous réserve de conserver un poids stable..).
+					<br><br>
+					<h3>Y a t'il un suivi par la suite ?</h3>
+					Une consultation de contrôle sera systématiquement programmée.<br>
+					En cas d’intervention chirurgicale un suivi régulier sera réalisé pendant une période de un an (ou plus en cas d’implants mammaires). Ces contrôles seront inclus dans le tarif initial.<br>
+					Dans tous les cas, n’hésitez pas à contacter à tout moment l’assistante ou la secrétaire pour toute question	
+					<br><br>
+				</div>
+				<a class="content-link cursor" id="actualites-item-1"><!--incrémenter avec la mm valeur qu'au dessus-->> En savoir plus</a>
+			</div>
+			<hr/>
+			<!-- fin bloc à dupliquer pour ajouter une actualité ----------------------------------------------------->
+		</div>
+	</div>
+{% endblock %}
+{% block javascripts %}
+	<script src="{{ asset('js/actualites.js') }}" type="text/javascript"></script>
+{% endblock %}

@@ -39,15 +39,16 @@
 
 			}
 			var page = "#" + current_element + " .interventions-bottomLeft"; //$(this).attr('href'); // Page cible
-			console.log(current_element);
+			// console.log(current_element);
 			var speed = 750; // Durée de l'animation (en ms)
+			// console.log($(page));
 			setTimeout(function(){
 				$('html, body').animate( { scrollTop: $(page).offset().top }, speed );
-			}, 300);
+			}, 400); // SI 400 TROP COURT TEXTE NA PAS LE TEMPS DE SE REPLIER AVANT QUE LANIM NE SE DECLENCHE ET LE POSITIONNEMENT NE SE FAI TPAS AU BON ENDROIT
 		});
 		
 		/* sous parties */
-		$('.content-link').click(function () {
+		/*$('.content-link').click(function () {
 			var current_element = $(this).attr('id') + '-content';
 			if( $('#' + current_element).css('display') == 'none') {
 				$('#' + current_element).slideDown();
@@ -58,8 +59,9 @@
 			} else {
 				$('#' + current_element).slideUp();
 			}
-		});
+		});*/
 		
+		/* CHANGEMENT COULEUR AU SURVOL SLIDE SECTION // NON FONCTIONNEL*/
 		/*$('.slide-section-link').hover ( function () {
 			$(this).attr('data-background-color-orig', $(this).css('background-color'));
 			$(this).css('background-color', 'white');

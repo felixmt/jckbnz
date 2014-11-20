@@ -4,9 +4,9 @@
 
 {% block body  %}
     <div class="bloc-container bloc-home">
-		<a href="{{ path('questions') }}">
-			<div class="btn-redQuestion">
-				<span style="font-size:14px;font-family:'Museo Sans 100'">L'Actualité</span><br><br>Esthétique
+		<a href="{{ path('actualites') }}">
+			<div class="btn-redQuestion btn-red">
+				<span style="font-size:14px;font-family:MuseoSans-100">L'Actualité</span><br><br>Esthétique
 				<div style="padding-top:10px"><img src="{{ asset ('img/arrow-home-main.png') }}"></div>
 			</div>
 		</a>
@@ -17,20 +17,39 @@
                 <div id="home-bottomLeftContent">
                     <div id="redbox"></div>
                     <div class="bloc-title">
-                       <span style="font-family:'Museo Sans 100'">Dr Jack</span> Benzaken
+                       <span style="font-family:MuseoSans-100">Dr Jack</span> Benzaken
                     </div>
-                    <span style="font-family:'Museo Sans 100'">Ancien interne des hopitaux de la région de Paris, Jack Benzaken est spécialiste en  chirurgie plastique reconstructrice et esthétique et pratique cette spécialité depuis plus de 20 ans.</span><br>
+                    <span style="font-family:MuseoSans-100">Ancien interne des hopitaux de la région de Paris, Jack Benzaken est spécialiste en  chirurgie plastique reconstructrice et esthétique et pratique cette spécialité depuis plus de 20 ans.</span><br>
                 </div>
-                <div class="btn-black"><a href="{{ path('benzaken') }}"> <span style="margin-right:7px;margin-bottom:5px;">En savoir <span style="font-family:'Museo Sans 500'">plus</span></span><span style="margin-top:10px"><img src="{{ asset('img/arrow-home-more.png') }}"></span></a></div>
+                <div class="btn-black"><a href="{{ path('benzaken') }}"> <span style="margin-right:7px;margin-bottom:5px;font-family:MuseoSans-100">En savoir <span style="font-family:MuseoSans-500">plus</span></span><span style="float:right"><img src="{{ asset('img/arrow-home-more.png') }}"></span></a></div>
             </div>
             <div id="home-bottomRight">
                 <a href="{{ path('visage') }}">
-					<div class="btn-redLarge">
-						<span style="font-size:14px;font-family: 'Museo Sans 500';">Les Interventions</span><br><br><span style="font-size:12px;">Chirurgie du visage et de la silhouette<br>Médecine esthétique</span><div style="padding-top:10px"><img src="{{ asset ('img/arrow-home-interventions.png') }}"></div>
+					<div class="btn-redLarge btn-red">
+						<span style="font-size:14px;font-family: 'MuseoSans-500';">Les Interventions</span><br><br><span style="font-size:12px;line-height:1.3;">Chirurgie du visage et de la silhouette<br>Médecine esthétique</span><div style="padding-top:10px"><img src="{{ asset ('img/arrow-home-interventions.png') }}"></div>
 					</div>
 				</a>
                 <div><img src="{{ asset('img/home-bottom.jpg') }}"></div>
             </div>
         </div>
     </div>
+{% endblock %}
+{% block javascripts %}
+	<script>
+		$(document).ready(function() {
+			$('.btn-red').mouseover( function () {
+				console.log('ooo');
+				$(this).css('background-color', '#ca4e4e');
+			});
+			$('.btn-red').mouseleave( function () {
+				$(this).css('background-color', '#b01e1e');
+			});
+			$('.btn-black').mouseover( function () {
+				$(this).css('background-color', '#39373e');
+			});
+			$('.btn-black').mouseleave( function () {
+				$(this).css('background-color', '#4a484f');
+			});
+		});
+	</script>
 {% endblock %}

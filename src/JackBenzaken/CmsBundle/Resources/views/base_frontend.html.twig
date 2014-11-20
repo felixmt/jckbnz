@@ -12,36 +12,13 @@
     {% set canonical = app.request.attributes.get('_route') %}
     <link rel="canonical" href="{{ url(canonical) }}" />
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-	<!--<script type="text/javascript">
-    (function() {
-        var path = '//easy.myfonts.net/v2/js?sid=159302(font-family=Museo+Sans+100)&sid=159306(font-family=Museo+Sans+700)&sid=159303(font-family=Museo+Sans+500)&key=DJbkJOo082',
-            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
-            trial = document.createElement('script');
-        trial.type = 'text/javascript';
-        trial.async = true;
-        trial.src = protocol + path;
-        var head = document.getElementsByTagName("head")[0];
-        head.appendChild(trial);
-    })();
-</script>
-<script type="text/javascript">
-    (function() {
-        var path = '//easy.myfonts.net/v2/js?sid=159305(font-family=Museo+Sans+300)&sid=159306(font-family=Museo+Sans+700)&sid=159303(font-family=Museo+Sans+500)&sid=159302(font-family=Museo+Sans+100)&key=Xo0Mzxd11u',
-            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
-            trial = document.createElement('script');
-        trial.type = 'text/javascript';
-        trial.async = true;
-        trial.src = protocol + path;
-        var head = document.getElementsByTagName("head")[0];
-        head.appendChild(trial);
-    })();
-</script>-->
 </head>
 <body>
+{# <body onload="document.getElementsByTagName('body')[0].style.display = 'block';" style="display:none;"> #}
     <div id="content">
         {# TOP MENU #}
         <div id="top-menu">
-            <div id="logo"><a href="{{ path('index') }}"><img src= "{{ asset('img/logo.png') }}"></a></div>
+            <div id="logo"><a href="{{ path('index') }}"><img height="48px" src= "{{ asset('img/logo.png') }}"></a></div>
             <div id="submenu">
             </div>
             <div id="subsubmenu">
@@ -49,10 +26,10 @@
             <div id="sections"><span style="display: inline-block;">
                 <ul>
                     <li><a id="benzaken" class="menu-item {% if canonical == 'benzaken' %} active {% endif %}" href="{{ path('benzaken') }}">Dr Jack Benzaken</a></li>
-                    <li style="border-left:1px dotted #fff;"><a id='interventions'  class="menu-item {% if canonical == 'visage' or canonical == 'silhouette' or canonical == 'silhouetteH' or canonical == 'poitrine' or canonical == 'rides' or canonical == 'ridesH' or canonical == 'dermatologique' or canonical == 'dermatologiqueH' %} active {% endif %}">Les interventions</a></li>
+                    <li style="border-left:1px dotted #fff;"><a id='interventions'  class="menu-item {% if canonical == 'visage' or canonical == 'silhouette' or canonical == 'silhouetteH' or canonical == 'poitrine' or canonical == 'rides' or canonical == 'ridesH' or canonical == 'dermatologique' or canonical == 'dermatologiqueH' or canonical == 'visageH' or canonical == 'sommeil' %} active {% endif %}">Les interventions</a></li>
                     <li><a id="lieux" class="menu-item {% if canonical == 'clinique' or canonical == 'cabinet' %} active {% endif %}">Les lieux</a></li>
                     <li><a id="presse" class="menu-item {% if canonical == 'presse' %} active {% endif %}	" href="{{ path('presse') }}">Presse</a></li>
-                    <li><a id="actualites" class="menu-item {% if canonical == 'actualites' %} active {% endif %}"" href="#">Actualités</a></li>
+                    <li><a id="actualites" class="menu-item {% if canonical == 'actualites' %} active {% endif %}" href="{{ path('actualites') }}">Actualités</a></li>
                     <li class="menu-item last-section"><a id="questions" href="{{ path('questions') }}">Vos questions</a></li>
                 </ul></span>
             </div>
@@ -65,17 +42,22 @@
             if ('{{ canonical }}' == 'visage' || '{{ canonical }}' == 'rides' || '{{ canonical }}' == 'dermatologique' || '{{ canonical }}' == 'poitrine' || '{{ canonical }}' == 'silhouette') {
 			   setInterventionsItems();
                setInterventionsFemmeItems();
-			   $('#submenu').hide(0).delay(500).slideToggle(500);
-               $('#subsubmenu').hide(0).delay(500).slideToggle(500);
-		   } else if ('{{ canonical }}' == 'silhouetteH' || '{{ canonical }}' == 'ridesH' || '{{ canonical }}' == 'dermatologiqueH') {
+			   $('#submenu').show();
+               $('#subsubmenu').show();
+			   /*$('#submenu').hide(0).delay(500).slideToggle(500);
+               $('#subsubmenu').hide(0).delay(500).slideToggle(500);*/
+		   } else if ('{{ canonical }}' == 'silhouetteH' || '{{ canonical }}' == 'ridesH' || '{{ canonical }}' == 'dermatologiqueH' || '{{canonical }}' == 'visageH' || '{{ canonical }}' == 'sommeil') {
                setInterventionsItems();
                setInterventionsHommeItems();
-			   $('#submenu').hide(0).delay(500).slideToggle(500);
-               $('#subsubmenu').hide(0).delay(500).slideToggle(500);
+			   $('#submenu').show();
+               $('#subsubmenu').show();
+			   /*$('#submenu').hide(0).delay(500).slideToggle(500);
+               $('#subsubmenu').hide(0).delay(500).slideToggle(500);*/
 			} else if ('{{ canonical }}' == 'clinique' || '{{ canonical }}' == 'cabinet') {
 				setLieuxItems ();
 				$('#subsubmenu').hide();
-				$('#submenu').hide(0).delay(500).slideToggle(500);
+				$('#submenu').show();
+			   /*$('#submenu').hide(0).delay(500).slideToggle(500);*/
 			} else {
                 $('#submenu').hide();
                 $('#subsubmenu').hide();
@@ -97,7 +79,7 @@
                         //console.log("susubmenu item : " + $("#submenu span ul li a").attr('id') + "current_item : " + current_item);
                         $( "#submenu" ).slideDown( "slow" );
                     } else {
-						if ( !(($(this).attr('id') == 'interventions' && ('{{ canonical }}' == 'visage' || '{{ canonical }}' == 'silhouette' || '{{ canonical }}' == 'silhouetteH' || '{{ canonical }}' == 'poitrine' || '{{ canonical }}' == 'rides' || '{{ canonical }}' == 'dermatologique')) || ($(this).attr('id') == 'lieux' && ('{{ canonical }}' == 'clinique' || '{{ canonical }}' == 'cabinet'))));
+						if ( !(($(this).attr('id') == 'interventions' && ('{{ canonical }}' == 'visage' || '{{ canonical }}' == 'silhouette' || '{{ canonical }}' == 'silhouetteH' || '{{ canonical }}' == 'poitrine' || '{{ canonical }}' == 'rides' || '{{ canonical }}' == 'dermatologique' || '{{ canonical }}' == 'dermatologiqueH' || '{{ canonical }}' == 'visageH' || '{{ canonical }}' == 'sommeil')) || ($(this).attr('id') == 'lieux' && ('{{ canonical }}' == 'clinique' || '{{ canonical }}' == 'cabinet'))));
 							$(this).removeClass('active');
                         $('#{{ canonical }}').addClass('active');
                     }
@@ -155,11 +137,12 @@
         }
 		function setInterventionsHommeItems () {
             $('#subsubmenu').empty();
-            $('#subsubmenu').append('<span class="text-indent"><ul><li><a class="{% if canonical == "visageH" %} active {% endif %}" id="visageH" href="#">Le visage</a></li><li><a class="{% if canonical == "silhouetteH" %} active {% endif %}" id="silhouetteH" href="{{ path("silhouetteH") }}">La silhouette</a></li><li><a class="{% if canonical == "sommeilH" %} active {% endif %}" id="sommeilH" href="#">Traitement du sommeil</a></li><li><a class="{% if canonical == "ridesH" %} active {% endif %}" id="ridesH" href="{{ path("ridesH") }}">Le traitement des rides</a></li><li class="last-section"><a class="{% if canonical == "dermatologique" %} active {% endif %}" id="dermatologieH" href="{{ path("dermatologiqueH") }}">La chirurgie dermatologique</a></li></ul></span><div class="menu-localisator" style="margin-left:318px;margin-top:0;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
+            $('#subsubmenu').append('<span class="text-indent"><ul><li><a class="{% if canonical == 'visageH' %} active {% endif %}" id="visageH" href="{{ path('visageH') }}">Le visage</a></li><li><a class="{% if canonical == 'silhouetteH' %} active {% endif %}" id="silhouetteH" href="{{ path('silhouetteH') }}">La silhouette</a></li><li><a class="{% if canonical == "sommeil" %} active {% endif %}" id="sommeil" href="{{ path('sommeil') }}">Le traitement du sommeil</a></li><li><a class="{% if canonical == 'ridesH' %} active {% endif %}" id="ridesH" href="{{ path("ridesH") }}">Le traitement des rides</a></li><li class="last-section"><a class="{% if canonical == "dermatologiqueH" %} active {% endif %}" id="dermatologieH" href="{{ path("dermatologiqueH") }}">La chirurgie dermatologique</a></li></ul></span><div class="menu-localisator" style="margin-left:318px;margin-top:0;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
         }
         function setLieuxItems () {
             $('#submenu').empty();
-            $('#submenu').append('<span class="text-indent"><ul><li class="last-section"><a class="submenu-item {% if canonical == "cabinet" %} active {% endif %}" id="cabinet" href="{{ path("cabinet") }}">Le Cabinet</a></li><li><a class="submenu-item {% if canonical == "clinique" %} active {% endif %}" id="clinique" href="{{ path("clinique") }}">La Clinique</a></li></ul></span><div class="menu-localisator" style="margin-left:470px;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
+			            $('#submenu').append('<span class="text-indent"><ul><li><a class="submenu-item {% if canonical == "cabinet" %} active {% endif %}" id="cabinet" href="{{ path('cabinet') }}">Le Cabinet</a></li><li class="last-section"><a class="submenu-item {% if canonical == "clinique" %} active {% endif %}" id="clinique" href="{{ path('clinique') }}">La Clinique</a></li></ul></span><div class="menu-localisator" style="margin-left:318px;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
+            //$('#submenu').append('<span class="text-indent"><ul><li><a class="submenu-item {% if canonical == "cabinet" %} active {% endif %}" id="cabinet" href="{{ path('cabinet') }}">Le Cabinet</a></li><li class="last-section"><a class="submenu-item {% if canonical == "clinique" %} active {% endif %}" id="clinique" href="{{ path('clinique') }}">La Clinique</a></li></ul></span><div class="menu-localisator" style="margin-left:470px;"><img src="{{ asset('img/menulocalisator.png') }}"></div>');
         }
     </script>
 </body>
@@ -167,7 +150,9 @@
 <div id="footer-left"><span style="font-family: MuseoSans-500;">Cabinet Jack Benzaken</span><br>
 49, Avenue Thiers<br>
 93340 Le Raincy<br>
-01 43 00 28 28</div>
+<a href="tel:0033143002828">01 43 00 28 28</a> - 
+<a href="tel:0033633057281">06 33 05 72 81</a>
+</div>
 <div id="footer-right">
     <a href="{{ path('cabinet') }}">Localiser sur le plan</a><br>
     <a href="{{ path('cabinet') }}">Prendre un rendez-vous</a><br>
