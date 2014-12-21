@@ -516,13 +516,17 @@ hr {
 }
 
 /************* ACTUALITES ****************/
+.actualites-item li {
+	margin-left:30px;
+}
 .actualites-item h3 {
 	font-size:13px;
 	font-weight:normal;
 	color:#2a80b9;
 }
 .actualites-item {
-	text-align:justify;
+	text-align:justify;	
+	margin-bottom:50px;
 }
 
 .actualites-item-content {
